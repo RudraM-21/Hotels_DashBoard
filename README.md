@@ -36,6 +36,10 @@ Raw CSV Data → Python ETL → MySQL Database → Power BI Dashboard
 
 ---
 
+
+![Power BI Dashboard](powerbi-dashboard.png)
+
+
 ## 📁 Repository Structure
 
 
