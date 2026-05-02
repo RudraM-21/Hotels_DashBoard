@@ -1,88 +1,70 @@
-# 🛒 SmartCart Customer Segmentation
+# 🏨 Hotel Revenue & Booking Insights Dashboard
 
-This project performs customer segmentation using K-Means clustering to identify distinct groups of customers based on their behavior and features.
-
----
-
-## 📁 Project Structure
-
-```
-SmartCart/
-│── smartcart.ipynb          # Main notebook (K-Means + PCA + Elbow Method)
-│── smartcart_customers.csv  # Dataset
-│── requirements.txt         # Dependencies
-│── README.md                # Project documentation
-│── elbow.png                # Elbow method graph
-```
+An end-to-end data engineering and business intelligence project designed to extract, transform, and visualize hotel performance metrics. This repository contains the complete pipeline—from Python-based ETL and relational database design to a fully interactive Power BI dashboard—enabling stakeholders to make data-driven decisions on revenue, occupancy, and booking trends.
 
 ---
 
-## 🚀 Features
+## 📌 Project Overview
 
-* Customer segmentation using K-Means clustering
-* Dimensionality reduction using PCA
-* Optimal cluster detection using Elbow Method (KneeLocator)
-* Data visualization for insights
+The hospitality industry relies heavily on understanding key performance indicators such as:
 
----
+- **RevPAR** (Revenue Per Available Room)  
+- **ADR** (Average Daily Rate)  
+- **Occupancy Rate**  
+- **Realized Revenue**
 
-## 📊 Elbow Method
+This project processes hotel operational data through a structured ETL pipeline and converts it into actionable insights via:
 
-![Elbow Graph](elbow.png)
-
-The elbow point in the graph indicates the optimal number of clusters for customer segmentation.
-
----
-
-## 🧰 Libraries Used
-
-* scikit-learn
-* pandas
-* matplotlib
-* kneed
+- **Extraction & Transformation:** Python (`Pandas`, `NumPy`) for cleaning and preprocessing  
+- **Database Design:** MySQL schema with primary/foreign keys and optimized queries  
+- **Business Intelligence:** Interactive Power BI dashboard for insights  
 
 ---
 
-## 📌 How to Run
+## 🛠️ Tech Stack & Architecture
 
-1. Clone the repository:
+- **Data Processing & ETL:** Python, Pandas, NumPy, SQLAlchemy  
+- **Database:** MySQL  
+- **Visualization:** Power BI  
+- **Tools:** Jupyter Notebook, VS Code  
 
-```
-git clone https://github.com/your-username/smartcart.git
-```
+### 🔄 Data Pipeline
 
-2. Navigate to the project folder:
 
-```
-cd smartcart
-```
+Raw CSV Data → Python ETL → MySQL Database → Power BI Dashboard
 
-3. Install dependencies:
-
-```
-pip install -r requirements.txt
-```
-
-4. Run the notebook:
-
-```
-smartcart.ipynb
-```
 
 ---
 
-## 📈 Output
+## 📁 Repository Structure
 
-* Segmented customer groups
-* Visualization of clusters
-* Optimal number of clusters using Elbow Method
+
+├── data/ # Raw datasets
+├── main.ipynb # ETL pipeline notebook
+├── data_transformation.sql # SQL schema & constraints
+├── EER diagram.pdf # Database design diagram
+├── Hotels_Data_Revenue_Insights.pbix # Power BI dashboard
+├── requirements.txt # Dependencies
+└── README.md # Documentation
+
+
+---
+
+## 🏗️ Database Design (Star Schema)
+
+The project uses a **Star Schema** for optimized analytical queries.
+
+### 📊 Fact Tables
+- **fact_bookings:**  
+  Stores booking-level data including revenue, dates, and platform details  
+
+- **fact_aggregated_bookings:**  
+  Stores aggregated metrics like total bookings and capacity  
+
+### 🗂️ Dimension Tables
+- **dim_hotels:** Hotel details (name, category, city)  
+- **dim_rooms:** Room categories (Elite, Standard, etc.)  
+- **dim_date:** Date-based features (month, week, weekday/weekend)  
 
 ---
 
-## 💡 Future Improvements
-
-* Add interactive visualizations
-* Deploy as a web app
-* Use advanced clustering algorithms
-
----
