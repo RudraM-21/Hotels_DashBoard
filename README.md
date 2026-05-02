@@ -43,13 +43,16 @@ Raw CSV Data → Python ETL → MySQL Database → Power BI Dashboard
 ## 📁 Repository Structure
 
 
-├── data/ # Raw datasets
-├── main.ipynb # ETL pipeline notebook
-├── data_transformation.sql # SQL schema & constraints
-├── EER diagram.pdf # Database design diagram
-├── Hotels_Data_Revenue_Insights.pbix # Power BI dashboard
-├── requirements.txt # Dependencies
-└── README.md # Documentation
+📁 Hotels_Dashboard/
+│
+├── 📁 data/                         # Raw datasets
+│
+├── 📓 main.ipynb                    # ETL pipeline notebook
+├── 🗄️ data_transformation.sql       # SQL schema & constraints
+├── 📄 EER diagram.pdf               # Database design diagram
+├── 📊 Hotels_Data_Revenue_Insights.pbix  # Power BI dashboard
+├── 📦 requirements.txt              # Dependencies
+└── 📘 README.md                     # Documentation
 
 
 ---
